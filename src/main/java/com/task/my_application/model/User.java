@@ -1,15 +1,14 @@
 package com.task.my_application.model;
 
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
-@RequiredArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "users")
+@NoArgsConstructor
+@RequiredArgsConstructor
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +23,5 @@ public class User {
     private String email;
     @NonNull
     private String telephone_number;
+
 }
