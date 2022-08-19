@@ -13,6 +13,7 @@ import com.task.my_application.repository.UserRepository;
 @AllArgsConstructor
 @Api(description = "Контроллер для работы с моделью User")
 public class UserController {
+
     private final UserRepository userRepository;
     @ApiOperation("Регистрация пользователя")
     @PostMapping("{firstName}/{lastName}/{patronymic}/{email}/{telephoneNumber}")
